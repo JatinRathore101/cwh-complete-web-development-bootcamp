@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope, if-else, switch in JS</title>
+</head>
+<body>
+    <!--       div>ul>li>item#id$*7       and press enter -->
+    <!--       div>ul>li#id${Item-$}*7       and press enter -->   
+    
+    <div>
+        <ul>
+            <li id="id1">Item-1</li>
+            <li id="id2">Item-2</li>
+            <li id="id3">Item-3</li>
+            <li id="id4">Item-4</li>
+            <li id="id5">Item-5</li>
+            <li id="id6">Item-6</li>
+            <li id="id7">Item-7</li>
+        </ul>
+    </div>
+    
+    <script>
+        const stline="_________________________________________________________________________________________________________"
+        // string stline can't be changed
+        
+        var a1="var not a good way to define variables";
+        console.log(a1);
+        console.log(stline)
+
+        let a2="instead use a2 wherever possible as its scope is limited to the block and chances of error are low";
+        console.log(a2);
+        console.log(stline)
+        console.log(stline)
+
+        // if else conditions
+
+        let a3=14;
+
+        if(a3<=5)
+        {
+            console.log("a3<5");
+        }
+        else if(a3>5&&a3<=10)
+        {
+            console.log("a3<10");
+        }
+        else if(a3>10&&a3<=15)
+        {
+            console.log("a3<15");
+     
+        }
+        else
+        {
+            console.log("a3 amar rahe");
+        }
+
+        console.log(stline)
+        console.log(stline)
+
+        // switch case statement
+
+        let a4="Radha";
+
+        switch (a4) 
+        {
+            case "Radha":
+                console.log("Barsana")
+                break;
+
+            case "Krishna":
+                console.log("Vrindavan")
+                break;
+                
+            case "Sita":
+                console.log("Janakpur")
+                break;
+        
+            default:
+                console.log("Braj")
+                break;
+        }
+        
+        console.log(stline)
+
+        // switch case without break;
+
+        const a5=7;
+
+        switch (a5) {
+            case 0:
+                console.log("a5 = 0");
+                
+            case 1:
+                console.log("a5 = 1");
+                
+            case 2:
+                console.log("a5 = 2");
+                
+            case 3:
+                console.log("a5 = 3");
+                
+            case 4:
+                console.log("a5 = 4");
+                
+            case 5:
+                console.log("a5 = 5");
+                
+            case 6:
+                console.log("a5 = 6");
+                
+            case 7:
+                console.log("a5 = 7");
+                
+            case 8:
+                console.log("a5 = 8");
+                
+            case 9:
+                console.log("a5 = 9");
+                
+            case 10:
+                console.log("a5 = 10");
+                
+            default:
+                console.log("a5 none digit");
+                
+        }
+
+        console.log(stline)
+        console.log(stline)
+
+
+    </script>
+</body>
+</html>

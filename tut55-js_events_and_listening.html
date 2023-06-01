@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and listening to events in JS</title>
+
+</head>
+
+<style>
+    .container{margin: 40px;padding: 10px;}
+    #container1{background-color: yellow;}
+    #container2{background-color: pink;}
+    #paragr1{color: red;}
+    #paragr2{color: rebeccapurple;}
+</style>
+
+<body>
+    <div class="container" id="container1">
+        <p id="paragr1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, nam ipsam molestiae fugit nihil laborum impedit eveniet minus eius rem? Ipsum consectetur quae harum praesentium ex sapiente aut numquam delectus. Distinctio quia voluptates laboriosam ipsa voluptatum eveniet corporis iure eos natus perspiciatis officia, maxime suscipit officiis repellat consequuntur veniam corrupti Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, minus possimus! Voluptatem magnam nisi nulla harum labore molestias quas, explicabo voluptates quibusdam cumque rem omnis sapiente cum reprehenderit ex. Cumque enim asperiores iure quos laudantium tempore, at, earum iste molestiae veritatis doloribus, facere mollitia nostrum laboriosam maxime commodi. Et labore velit animi quod, quam repudiandae, cum, libero voluptatum ipsam molestiae tempora. Doloribus debitis inventore culpa laudantium accusamus quos ut nemo ipsam possimus voluptatum aspernatur saepe molestias delectus cumque eos magni repudiandae expedita minus laboriosam harum fugit, quis tempore ullam. Non inventore numquam provident laboriosam est, itaque commodi magni ex incidunt.</p>
+    </div>
+
+
+    <div class="container" id="container2">
+        <p id="paragr2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, nam ipsam molestiae fugit nihil laborum impedit eveniet minus eius rem? Ipsum consectetur quae harum praesentium ex sapiente aut numquam delectus. Distinctio quia voluptates laboriosam ipsa voluptatum eveniet corporis iure eos natus perspiciatis officia, maxime suscipit officiis repellat consequuntur veniam corrupti Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, minus possimus! Voluptatem magnam nisi nulla harum labore molestias quas, explicabo voluptates quibusdam cumque rem omnis sapiente cum reprehenderit ex. Cumque enim asperiores iure quos laudantium tempore, at, earum iste molestiae veritatis doloribus, facere mollitia nostrum laboriosam maxime commodi. Et labore velit animi quod, quam repudiandae, cum, libero voluptatum ipsam molestiae tempora. Doloribus debitis inventore culpa laudantium accusamus quos ut nemo ipsam possimus voluptatum aspernatur saepe molestias delectus cumque eos magni repudiandae expedita minus laboriosam harum fugit, quis tempore ullam. Non inventore numquam provident laboriosam est, itaque commodi magni ex incidunt.</p>
+
+        <button id="cont2btn" onclick="toggleShowHide()"> show/hide </button> <!-- here onclick is listening of event click over element show/hide button -->
+
+    </div>
+
+    <script>
+        // let para = document.getElementById('para');
+        // para.addEventListener('mouseover', function run(){
+        //     alert('Mouse Inside')
+        // });
+
+        let  paragr1 = document.getElementById('paragr1');
+        let old_paragr=paragr1.innerHTML;
+
+        paragr1.addEventListener('mouseover', function run(){
+            paragr1.innerHTML="LOREM IPSUM 150";
+        });
+        paragr1.addEventListener('mouseout', function run(){
+            paragr1.innerHTML=old_paragr;
+        });
+
+
+        function toggleShowHide()
+        {
+            let cont2btn=document.getElementById("cont2btn");
+            let paragr2=document.getElementById("paragr2");
+
+            if(paragr2.style.display=="none")
+            {paragr2.style.display="block";}
+            else
+            {paragr2.style.display="none";}
+        }
+    </script>
+</body>
+</html>

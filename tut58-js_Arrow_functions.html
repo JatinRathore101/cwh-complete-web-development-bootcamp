@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+<style>
+    #div1{
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        padding: 34px;
+        margin: 4px;
+        text-align: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="container" id="div1">
+        This is arrow functions tutorial.
+    </div>
+    <script>
+
+    // function greet() {
+    //     console.log('Good morning');
+    // }
+
+
+    // Arrow function
+    
+    // let greet =  ()=> {
+    //     console.log('Good morning');
+    // }
+
+    let div1=document.getElementById('div1');
+
+    let greet = () => div1.innerHTML=div1.innerHTML+' Good morning';
+    setTimeout(greet,5000)
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+    
+    // let sum2 = (a, b)=>{
+    //     return a+b;
+    // };
+
+    let sum = (a, b, c) => a+b+c; 
+
+    console.log("--------------",sum(3,2,2));
+    
+    let half = a => a/2;
+    
+    console.log("--------------",half(3+11));
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+    console.log('--------------------------');
+    setTimeout(() => {
+        console.log("We are inside settimeout"); // this statement is printed at last after 3 seconds
+    }, 3000);
+    console.log('--------------------------');
+
+    let obj1={
+        greeting: "HELLO",
+        names: ["DAVID", "EVAN", "CHRIS", "PETER"],
+        speak(){
+            this.names.forEach((student)=>{ // forEach is a kind of loop 
+                console.log(this.greeting + " MR. " + student);
+            });
+        }
+    }
+    obj1.speak();
+    </script>
+</body>
+</html>

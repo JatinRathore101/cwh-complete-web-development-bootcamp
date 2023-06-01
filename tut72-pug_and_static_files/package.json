@@ -1,0 +1,15 @@
+{
+  "name": "exp_pug_stat",
+  "version": "1.0.0",
+  "description": "understanding HTML template pug and also serving static files via server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jatin Ratore",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  }
+}

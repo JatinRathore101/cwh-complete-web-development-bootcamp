@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript | Strings and String Methods</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <div id="d1"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nisi, quaerat corrupti quas, illum nobis tempore sequi cumque laboriosam magni expedita earum? Similique corrupti nam magni reprehenderit quia vero, reiciendis eius officiis doloremque ipsa?</p>
+    </div>
+    <script>
+    var string1 = 'on"e';
+    console.log(string1);
+
+    var string2 = "t'wo";
+    console.log(string2);
+
+    var string3 = "Radha";
+    console.log(string3);
+
+    var string4 = 'Krishna';
+    console.log(string4);
+
+    var string5 = `Braj`;
+    console.log(string5);
+
+    var string6 = `${string3} baisu ksjxioqjw ${string4}`; 
+    // this only works in `` quotes <~ key below escape>
+    console.log(string6);
+
+    console.log(string3+" "+string4+" "+string5);
+    var len1 = string1.length;
+    console.log(`Length of string4 is ${string4.length}`)
+
+    console.log("Hello \\nworld\nRadha\tKrishna");
+    var string7 = new String("Barsana");
+    console.log(string7);
+    document.getElementById('d1').innerHTML = '<h3>D1 data entered using JS</h3>'
+    
+    </script>
+</body>
+</html>

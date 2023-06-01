@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigating the DOMS</title>
+</head>
+<body>
+    <div class="class1" id="div1">
+        <ul>
+            <li id="li1">Data1</li>
+            <li id="li2" class="class3" >Data2</li>
+            <li id="li3" class="class2" >Data3</li>
+            
+            <p id="para1" class="class3" >FIRST p</p>
+            
+            <li id="li4">Data4</li>
+            
+            <li id="li5">Data5</li>
+            <li id="li6" class="class3" >Data6</li>
+            <li id="li7" class="class2" >Data7</li>
+        </ul>
+        
+        <p id="para2">SECOND p</p>
+                        
+    </div>
+    <div class="class1" id="div2">
+        <ul>
+            <li id="li8" class="class2" >Data8</li>
+            <li id="li9">Data9</li>
+            <li id="li10">Data10</li>
+
+            <p id="para3">THIRD p</p>
+
+            <li id="li11" class="class2" >Data11</li>
+            <li id="li12">Data12</li>
+            <li id="li13">Data13</li>
+            <li id="li14" class="class3" >Data14</li>
+        </ul>
+
+        <script>
+            console.log('___________________________________________________________________________')
+            console.log('___________________________________________________________________________')
+
+            let li12=document.getElementById("li12");
+            console.log(li12);
+
+            console.log('___________________________________________________________________________')
+            
+            let div2=document.getElementById('div2');
+            console.log(div2);
+
+            console.log('___________________________________________________________________________')
+            
+            let class2=document.getElementsByClassName("class2");
+            console.log(class2);
+            console.log('Accessing Index => console.log(class2[2]); = ',class2[2]);
+            
+            console.log('___________________________________________________________________________')
+            
+            let selector1=document.querySelector('#para2')
+            console.log(selector1);
+
+            console.log('___________________________________________________________________________')
+
+            let selector2=document.querySelector('.class3')
+            console.log(selector2);
+
+            console.log('___________________________________________________________________________')
+
+            let selector3=document.querySelectorAll('.class3')
+            console.log(selector3);
+
+            console.log('___________________________________________________________________________')
+           
+            let selector4=document.querySelectorAll('ul>p')
+            console.log(selector4);
+
+            console.log('___________________________________________________________________________')
+            console.log('___________________________________________________________________________')
+
+
+        </script>
+
+    </div>
+</body>
+</html>

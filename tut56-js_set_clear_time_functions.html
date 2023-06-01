@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and listening to events in JS</title>
+
+</head>
+
+<style>
+    
+    #clock
+    {
+        background-color: black;
+        color: white;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #div2
+    {
+        background-color: black;
+        color: green;
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    #div3
+    {
+        background-color: black;
+        color: green;
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #div4
+    {
+        background-color: orangered;
+        color: gold;
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+</style>
+
+<body>
+    
+    <div id="clock"></div>
+
+    <div id="div2"></div>
+
+    <div id="div3"></div>
+    
+    <div id="div4"></div>
+
+    <script>
+    ///////////////////////////////////////////////////////////////////////////////
+    
+        console.log("This is tutorial 58");
+
+        // setTimeout --> Allows us to run the function once after the interval of time
+
+        // clearTimeout --> Allows us to run the function repeatedly after the interval of time
+
+    ///////////////////////////////////////////////////////////////////////////////
+
+        let div2=document.getElementById("div2");
+        function greet(name){div2.innerHTML= "HEY " + name + " YOU ARE VERY SMART.";}
+        setTimeout(greet,5000,'JATIN');// time in miliseconds
+    
+        // setTimeout(greet(), 12000,'JATIN'); --> Wrong as it is calling the function inside setTimeout
+
+        let div3=document.getElementById("div3");
+        function weather(place){div3.innerHTML= place + " IS CHILLING COLD.";}
+        timeOut = setTimeout(weather, 5000, "SIBERIA");
+        console.log(timeOut);
+        clearTimeout(timeOut);
+
+    ///////////////////////////////////////////////////////////////////////////////
+        
+        let ctd=document.getElementById("clock");        
+        
+        function curtime()
+        {
+            let ctime=new Date;
+            ctd.innerHTML=ctime;
+        }
+        
+        setInterval(curtime,1000);
+
+    ///////////////////////////////////////////////////////////////////////////////
+
+        let intervalId = setInterval(weather, 5000, "SIBERIA");
+        clearInterval(intervalId);
+
+        let div4=document.getElementById("div4");
+        function RK(){div4.innerHTML = div4.innerHTML + "RADHE RADHE ";}
+        setInterval(RK, 1);
+
+    ///////////////////////////////////////////////////////////////////////////////
+    </script>
+</body>
+</html>

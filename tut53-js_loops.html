@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in JavaScript</title>
+</head>
+<body>
+    <!-- div>ul>li#item${data for item$}*7 -->
+    <div>
+        <ul>
+            <li id="item1">data for item1</li>
+            <li id="item2">data for item2</li>
+            <li id="item3">data for item3</li>
+            <li id="item4">data for item4</li>
+            <li id="item5">data for item5</li>
+            <li id="item6">data for item6</li>
+            <li id="item7">data for item7</li>
+        </ul>
+    </div>
+
+    <script>
+        console.log('_____________________________________________________________')
+        console.log('_____________________________________________________________')
+
+        for(let i=0;i<4;i++)
+        {console.log(i," ");}
+
+        console.log('_____________________________________________________________')
+
+        let array1=['bablu',-7,101.010,"Taplu"];
+
+        console.log('CONVENTIONAL FOR LOOP');
+
+        for(let i=0;i<array1.length;i++)
+        {console.log(array1[i]);}
+
+        console.log('_____________________________________________________________')
+        
+        console.log("forEach LOOP");
+        
+        array1.forEach(function f(it)
+        {console.log(it);}
+        )
+        
+        console.log('_____________________________________________________________')
+        
+        console.log('For in LOOP');
+
+        for(x in array1)
+        {
+            // console.log(x);  // here in for-in loop indicates index
+            console.log(array1[x]);
+        }
+        
+        console.log('_____________________________________________________________')
+        
+        let braj={
+            darling:"Shri Krishna",
+            Queen:"Shri Radha Rani",
+            gardan:"Shri Vrindhawan Dham",
+            river:"Shri Yamuna maa"
+        }
+
+        console.log("USING FOR-IN LOOP TO TRAVERSE OVER STRUCTURE");
+
+        for(key in braj)
+        {
+            console.log(`the ${key} of braj is ${braj[key]}`);
+        }
+
+        console.log('_____________________________________________________________')
+        
+        console.log("WHILE LOOP");
+        
+        let i=1;
+        while(i<4)
+        {console.log(i);i++;}
+
+        console.log('_____________________________________________________________')
+
+        i=7;
+        while(i<4)
+        {console.log(i);i++;}
+
+        console.log('_____________________________________________________________')
+
+        console.log("DO WHILE LOOP");
+        
+        i=1;
+        do{console.log(i);i++;}while(i<4);
+
+        console.log('_____________________________________________________________')
+
+        i=7;
+        do{console.log(i);i++;}while(i<4);
+
+        console.log('_____________________________________________________________')
+        console.log('_____________________________________________________________')
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and objects in JS</title>
+</head>
+<body>
+    <!-- div>ul>li#item${data$}*7 -->
+    <div>
+        <ul>
+            <li id="item1">data1</li>
+            <li id="item2">data2</li>
+            <li id="item3">data3</li>
+            <li id="item4">data4</li>
+            <li id="item5">data5</li>
+            <li id="item6">data6</li>
+            <li id="item7">data7</li>
+        </ul>
+    </div>
+
+    <script>
+        console.log('______________________________________________________________________________')
+        console.log('______________________________________________________________________________')
+                
+        let a1=-14.35;
+        console.log(a1)
+        
+        let a2=999;
+        console.log(a2)
+        
+        let a3=true;
+        console.log(a3)
+        
+        let a4=null;
+        console.log(a4)
+        
+        let a5=undefined;
+        console.log(a5)
+        
+        let a6='Radha';
+        console.log(a6)
+        
+        let a7="Krishna";
+        console.log(a7)
+        
+        console.log('______________________________________________________________________________')
+
+        let obj1 = 
+        {   // use coma instead of semicolon to seprate members inside object 
+            s1:"Hari",
+            s2:'Om',
+            s3:null,
+            "s 4":"Raman",
+            s5:false,
+            s6:undefined,
+            s7:92.291,
+            s8:-17
+        }
+        
+        console.log(obj1);
+
+        let a8=obj1["s5"];
+        console.log(a8)
+
+        let a9=obj1["s 4"];
+        console.log(a9)
+
+        console.log(obj1["s8"])
+
+        let a10=obj1.s7;
+        console.log(a10)
+
+        console.log(obj1.s8)
+
+        console.log('______________________________________________________________________________')
+
+        let array1=[28.1,'Hari',"Laxmi",-9,null,undefined,false,'numero'];
+        console.log(array1)
+        console.log(array1.length)
+
+        let array2=new Array('Radha Rani',-119,false,'uno');
+        console.log(array2)
+        console.log(array2.length)
+
+        let array3=new Array(10,11);
+        console.log(array3)
+        console.log(array3.length)
+
+        let array4=new Array(10);
+        console.log(array4)
+        console.log(array4.length)
+
+        console.log('______________________________________________________________________________')
+
+        array4.push("new element append")
+        console.log(array4)
+        console.log(array4.length)
+
+        console.log(array1)
+        console.log(array1[4])
+        array1.sort();
+        console.log(array1)
+        console.log(array1[4])
+        
+        console.log('______________________________________________________________________________')
+        console.log('______________________________________________________________________________')
+
+    </script>
+</body>
+</html>

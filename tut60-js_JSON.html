@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial</title>
+</head>
+<body>
+
+    <div class="container">This is my container</div>
+
+    <script>
+
+
+// ******************************* JSON *****************************
+
+                            // JSON.stringify()
+
+                            // JSON.replace()
+
+                            // JSON.parse()
+
+// *******************************************************************
+
+
+
+
+        let struct1 = {
+            name: "Krishna",
+            village: "Gokul",
+            friend: "Sudama",
+            food: "Maakhan" //#ShreeRadhaRaniSquad
+        } 
+        console.log(struct1);
+        let Json1 = JSON.stringify(struct1);
+        console.log(Json1);
+
+        Json2 = Json1.replace('Gokul', 'Vrindhavan');
+        console.log(Json2)
+
+        struct2 = JSON.parse(Json2);
+        console.log(struct2);
+
+    </script>
+</body>
+</html>

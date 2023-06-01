@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+<body>
+    <!-- div>ul>li#item${data$}*7 -->
+    <div>
+        <ul>
+            <li id="item1">data1</li>
+            <li id="item2">data2</li>
+            <li id="item3">data3</li>
+            <li id="item4">data4</li>
+            <li id="item5">data5</li>
+            <li id="item6">data6</li>
+            <li id="item7">data7</li>
+        </ul>
+    </div>
+
+    <script>
+
+        // let a=prompt("Do you have access to this protected zone?","No");
+
+        // // data entered in prompt by client can be saved in the server.
+        
+        // if(a=="No"||a=="no"||a=="nO"||a=="NO"){console.log("Please leave this site, you may be arrested.");}
+        // else{console.log("Only for individual use.");}
+
+       
+        let b="No name provided";
+        let c=prompt("What is your name","Guest");
+        // name if provided it will be saved in b, else we will know NO name provided
+        if(c!="Guest"){b=c;}
+        console.log(b);
+        
+    </script>
+</body>
+</html>

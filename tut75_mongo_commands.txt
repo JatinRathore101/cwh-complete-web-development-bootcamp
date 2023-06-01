@@ -1,0 +1,88 @@
+mongod => this command on server terminal (first terminal) starts the database process on the server
+ 
+
+mongo => this command on client terminal (second terminal) makes connection from database (running mongod) on the server 
+
+show dbs => shows existing databases which have atleast 1 entry
+
+use db_name => switches to db_name database, creates if no such database exists
+
+db => shows name of current database
+
+show collections => shows number of collections in current database
+
+db.collection_name.insertOne({"Key1":value1, "Key2":value2, "Key3":value3, ......}) => insertion single entry in current db // entry generally have key value pairs
+
+db.collection_name.insertMany([{"Key1":value1, "Key2":value2, "Key3":value3, ......}, {"Key1":value1, "Key2":value2, "Key3":value3, ......}, {"Key1":value1, "Key2":value2, "Key3":value3, ......}, ...........]) => insertion multiple entries into current db by grouping them in an array
+
+Entered elements/entries can be completely same, duplicate entries are allowed in mongodb, mangodb provides an unique id to each entry irrespective of that the entry is new and unique or the entry is duplicate
+ObjectId is the primary key for each entry
+No perticular schema is required, even entries belonging to same collection in a database can have different fields/columns/keys
+
+
+db.collection_name.find() => shows all existing entries in current db , when no filter applies with find()
+
+db.collection_name.find({"Keyx":valuex}) => filter to shows/search/query/find entries which have some key keyx with value valuex
+
+db.collection_name.find({"Keyx":{$gte:valuex}}) => filter to find entries which have some key keyx with value greater than or equal to valuex
+
+db.collection_name.find({"Keyx":{$gt:valuex}}) => filter to find entries which have some key keyx with value greater than valuex
+
+db.collection_name.find({"Keyx":{$lte:valuex}} , {"Keyy":{$gt:valuey}} , {"Keyz":{$gte:valuez}}) => combined (and) filter example to find entries which have 
+some key keyx with value less than or equal to valuex 
+and some key keyy with value greater than valuey 
+and some key keyz with value greater than or equal to valuez
+
+db.collection_name.find({$or:[ {"Keyx":{$lte:valuex}} , {"Keyy":{$gt:valuey}} , {"Keyz":{$gte:valuez}} ]}) => combined (or) filter example to find entries which have 
+some key keyx with value less than or equal to valuex 
+or some key keyy with value greater than valuey 
+or some key keyz with value greater than or equal to valuez
+
+
+
+db.collection_name.deleteMany({}) => deletes full collection
+
+Almost all filter commands in delete are same as commands in find, just you have 2 types of delete, deleteOne() and deleteMany()
+db.collection_name.deleteOne(query) => removes first matching entry from your query entered in delete
+db.collection_name.deleteMany(query) => deleted all matching entries from your query entered in delete
+
+
+db.collection_name.updateOne(query,update) => updates single first encountered entry with given update which matches the given query  
+db.collection_name.updateMany(query,update) => updates all entries with given update that match the given query
+update can update value of existing keys or may also create/insert new key value pair
+
+_____________________________________________________________________________________________________________________________________ 
+
+mongod => main database process on the server (first terminal)
+We can connect mongod using different ways like - mongo shell in terminal , compass GUI , mongoose library in node.js , pymongo library in python 
+
+
+
+USING COMPASS
+mongodb compass -> A GUI for connecting and using (mongod) process much easily without using (mongo) shell and mongo commands. 
+start mongod process in terminal
+
+to connect mongod of local server, we connect compass to localhost:27017 , where 27017 is the port at with mongod runs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

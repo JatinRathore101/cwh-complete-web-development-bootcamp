@@ -1,0 +1,14 @@
+{
+  "name": "tut74_bringing_data_to_backend_via_post_request",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "j",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
